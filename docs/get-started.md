@@ -59,7 +59,7 @@
 - [Functional Programming](pages/programming/paradigms/functional.md)
 - Event-Driven Programming
 - [Reactive Programming](pages/programming/paradigms/reactive.md)
-- Concurrent Programming
+- [Concurrent Programming](pages/programming/paradigms/concurrent.md)
 - Aspect-Oriented Programming (AOP)
 - Logic Programming
 - Domain-Specific Languages (DSLs)
