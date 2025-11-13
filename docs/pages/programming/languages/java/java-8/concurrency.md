@@ -47,7 +47,7 @@ The `java.util.concurrent.Executors` class provides a factory for creating threa
 >Executors can be used to submit tasks for execution and manage their lifecycles.
 
 
-- See also: [Executors]()<!-- TODO: -->
+- See also: [Executors](concurrency/executors.md)
 
 
 <sub>[Back to top](#table-of-contents)</sub>
@@ -76,7 +76,7 @@ Java provides the `Callable` interface for defining tasks that can return values
 A `Future` represents a placeholder for the result of a computation, allowing you to retrieve the result asynchronously or cancel the task.
 
 
-- See also: [Callable and Future]()<!-- TODO: -->
+- See also: [Callable and Future](concurrency/callable-and-future.md)
 
 
 <sub>[Back to top](#table-of-contents)</sub>
@@ -88,7 +88,7 @@ Introduced in Java 8, `CompletableFuture` is a powerful and flexible API for asy
 `CompletableFuture` supports callbacks, chaining of operations, and combining multiple asynchronous tasks.
 
 
-- See also: [Completable Future]()<!-- TODO: -->
+- See also: [CompletableFuture](concurrency/completable-future.md)
 
 
 <sub>[Back to top](#table-of-contents)</sub>
@@ -98,7 +98,7 @@ Introduced in Java 8, `CompletableFuture` is a powerful and flexible API for asy
 Java's memory model defines how threads interact with memory, ensuring consistency and visibility of data among threads. This includes rules for volatile variables, synchronized blocks, and atomic operations.
 
 
-- See also: [Java Memory Model]()<!-- TODO: -->
+- See also: [Java Memory Model](concurrency/java-memory-model.md)
 
 
 <sub>[Back to top](#table-of-contents)</sub>
