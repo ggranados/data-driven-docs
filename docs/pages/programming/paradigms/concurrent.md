@@ -379,7 +379,7 @@ Reusable pool of worker threads that execute submitted tasks.
 - Submission interface
 - Lifecycle management
 
-**See also:** [Java Executors](../languages/java/java-8/concurrency.md#executors)
+**See also:** [Java Executors](../languages/java/concurrency.md#executors)
 
 <sub>[Back to top](#table-of-contents)</sub>
 
@@ -399,8 +399,8 @@ Placeholder for a value that will be available in the future.
 - **CompletableFuture**: Composable async operations
 
 **See also:**
-- [Java Callable and Future](../languages/java/java-8/concurrency.md#callable-and-future)
-- [Java CompletableFuture](../languages/java/java-8/concurrency.md#completablefuture)
+- [Java Callable and Future](../languages/java/concurrency.md#callable-and-future)
+- [Java CompletableFuture](../languages/java/concurrency.md#completablefuture)
 
 <sub>[Back to top](#table-of-contents)</sub>
 
@@ -483,7 +483,7 @@ Data structures that use atomic operations instead of locks.
    - Heisenbugs (disappear when debugging)
    - Need for stress testing
 
-**See also:** [Java Memory Model](../languages/java/java-8/concurrency.md#java-memory-model)
+**See also:** [Java Memory Model](../languages/java/concurrency.md#java-memory-model)
 
 <sub>[Back to top](#table-of-contents)</sub>
 
@@ -704,7 +704,7 @@ Modern programming languages provide varying levels of support for concurrent pr
 ### Strong Standard Library Support
 
 - **Java**: Comprehensive concurrency utilities
-  - See also: [Java Concurrency](../languages/java/java-8/concurrency.md)
+  - See also: [Java Concurrency](../languages/java/concurrency.md)
   - Thread API, ExecutorService, concurrent collections
   - CompletableFuture for async programming
   - Fork/Join framework for parallelism
@@ -762,7 +762,7 @@ Modern programming languages provide varying levels of support for concurrent pr
 - [Patterns for Parallel Programming](https://www.oreilly.com/library/view/patterns-for-parallel/0321228111/)
 
 **Language-Specific:**
-- Java: [Java Concurrency Documentation](../languages/java/java-8/concurrency.md)
+- Java: [Java Concurrency Documentation](../languages/java/concurrency.md)
 - Go: [Effective Go - Concurrency](https://go.dev/doc/effective_go#concurrency)
 - Rust: [The Rust Book - Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
 - Erlang: [Learn You Some Erlang - Concurrency](https://learnyousomeerlang.com/the-hitchhikers-guide-to-concurrency)

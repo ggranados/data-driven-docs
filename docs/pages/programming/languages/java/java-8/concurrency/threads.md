@@ -345,6 +345,6 @@ Livelocks can be mitigated by introducing randomness or timeouts into the thread
 [Languages](../../../../../../get-started.md#languages) |
 [Java Development](../../develop.md#multithreading-and-concurrency) |
 [Java 8](../../versions.md#java-8-lts) |
-[Concurrency](../concurrency.md)
+[Concurrency](../../concurrency.md)
 
 ---

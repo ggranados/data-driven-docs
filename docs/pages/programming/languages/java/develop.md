@@ -109,13 +109,22 @@
 
 <sub>[Back to top](#table-of-contents)</sub>
 
-### [Multithreading and Concurrency](java-8/concurrency.md)
+### [Multithreading and Concurrency](concurrency.md)
 
-  - Creating and managing threads
-  - Thread synchronization
-  - Inter-thread communication
-  - Parallel streams
-  - Executors and thread pools
+  - [Creating and managing threads](java-8/concurrency/threads.md)
+  - [Thread lifecycle and states](java-8/concurrency/threads.md#thread-lifecycle)
+  - [Java Memory Model](java-8/concurrency/java-memory-model.md)
+  - [Thread synchronization](java-8/concurrency/synchronization.md)
+  - [Locks and Conditions](java-8/concurrency/locks-and-conditions.md)
+  - [Inter-thread communication](java-8/concurrency/synchronization.md#inter-thread-communication)
+  - [Atomic variables](java-8/concurrency/atomic-variables.md)
+  - [Concurrency utilities](java-8/concurrency/concurrency-utilities.md)
+  - [Executors and thread pools](java-8/concurrency/executors.md)
+  - [Callables and Futures](java-8/concurrency/callable-and-future.md)
+  - [CompletableFuture](java-8/concurrency/completable-future.md)
+  - [Fork/Join framework](java-8/concurrency/fork-join.md)
+  - [Parallel streams](java-8/stream-api.md#parallel-streams)
+  - [Common pitfalls and best practices](java-8/concurrency/threads.md#concurrency-issues)
 
 <sub>[Back to top](#table-of-contents)</sub>
 

@@ -409,7 +409,7 @@ graph TB
 ---
 
 [Get Started](../../../../../../get-started.md) |
-[Java Concurrency](../concurrency.md) |
+[Java Concurrency](../../concurrency.md) |
 [Java 8](../../versions.md#java-8-lts)
 
 ---
