@@ -1,0 +1,30 @@
+<!-- Mermaid.js Support - Alternative Approach -->
+<!-- Add this include to pages that need Mermaid diagrams -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00ff00',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#00ff00',
+        lineColor: '#00ff00',
+        secondaryColor: '#1a1a1a',
+        tertiaryColor: '#2a2a2a',
+        background: '#0d1117',
+        mainBkg: '#0d1117',
+        secondBkg: '#1a1a1a',
+        tertiaryBkg: '#2a2a2a',
+        textColor: '#fff',
+        border1: '#00ff00',
+        border2: '#00ff00'
+      },
+      flowchart: {
+        htmlLabels: true,
+        curve: 'basis'
+      }
+    });
+  });
+</script>

@@ -36,8 +36,8 @@
     </div>
 
     <!-- Mermaid.js Support -->
-    <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
       mermaid.initialize({
         startOnLoad: true,
         theme: 'dark',
@@ -47,7 +47,11 @@
           primaryBorderColor: '#00ff00',
           lineColor: '#00ff00',
           secondaryColor: '#1a1a1a',
-          tertiaryColor: '#2a2a2a'
+          tertiaryColor: '#2a2a2a',
+          background: '#0d1117',
+          mainBkg: '#0d1117',
+          secondBkg: '#1a1a1a',
+          tertiaryBkg: '#2a2a2a'
         }
       });
     </script>

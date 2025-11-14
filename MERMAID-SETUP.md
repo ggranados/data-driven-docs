@@ -9,14 +9,17 @@ This project now supports **Mermaid.js** diagrams in GitHub Pages.
 Created a custom Jekyll layout that extends the Hacker theme and adds Mermaid rendering:
 
 **Files Added:**
-- `docs/_layouts/default.html` - Custom layout with Mermaid.js integration
+- `docs/_layouts/default.html` - Custom layout with Mermaid.js integration (traditional script loading)
 - `docs/_includes/head-custom.html` - Custom head elements placeholder
+- `docs/_includes/mermaid.html` - Alternative include for per-page Mermaid loading
+- `docs/mermaid-test.md` - Test page with sample diagrams
+- `docs/_config.yml` - Updated with Kramdown markdown settings
 
 **How It Works:**
 1. The custom layout overrides the default Hacker theme layout
-2. Mermaid.js v10 is loaded from CDN using ES modules
+2. Mermaid.js v10 is loaded from CDN using traditional script tag (more compatible than ES modules)
 3. Configured with dark theme colors matching the Hacker theme aesthetic
-4. Automatically initializes on page load
+4. Automatically initializes on page load with DOMContentLoaded event
 
 ## Using Mermaid Diagrams
 
@@ -78,21 +81,53 @@ If you want to avoid runtime JavaScript:
 ### Option 4: Use GitHub's Native Mermaid (Markdown only)
 GitHub README files support Mermaid natively, but GitHub Pages doesn't automatically. Our custom layout provides this functionality.
 
+## Testing
+
+**Test Page:** Visit `/mermaid-test.html` on your GitHub Pages site to verify Mermaid is working.
+
+Example: `https://ggranados.github.io/data-driven-docs/mermaid-test`
+
+If diagrams render on the test page, Mermaid is configured correctly.
+
 ## Troubleshooting
 
 **Diagrams not rendering:**
-1. Check browser console for errors
-2. Verify GitHub Pages deployment completed
-3. Clear browser cache
-4. Ensure mermaid code blocks use ` ```mermaid ` (not `~~~mermaid`)
+1. **Check browser console** for JavaScript errors (F12 → Console tab)
+2. **Verify GitHub Pages deployment** completed (Settings → Pages → last deployment time)
+3. **Clear browser cache** (Ctrl+Shift+R or Cmd+Shift+R)
+4. **Check syntax**: Ensure mermaid code blocks use ` ```mermaid ` (not `~~~mermaid`)
+5. **Wait for rebuild**: GitHub Pages can take 1-5 minutes to rebuild after push
+
+**If global layout isn't working, use per-page include:**
+
+Add this to the top of pages that need Mermaid:
+
+```markdown
+---
+layout: default
+---
+
+{% include mermaid.html %}
+
+# Your Page Title
+
+```mermaid
+graph TD
+    A --> B
+```
+```
+
+This manually loads Mermaid on specific pages only.
 
 **Styling issues:**
 - Edit theme colors in `docs/_layouts/default.html`
 - Adjust `themeVariables` object
+- Check CSS conflicts with theme
 
 **Performance concerns:**
-- Mermaid loads asynchronously from CDN
-- Consider self-hosting mermaid.js if needed
+- Mermaid loads from CDN (may be slow on first load)
+- Consider self-hosting mermaid.js for faster loads
+- Use `<pre class="mermaid">` for manual initialization if needed
 
 ## References
 
