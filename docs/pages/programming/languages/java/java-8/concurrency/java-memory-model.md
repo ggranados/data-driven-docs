@@ -76,7 +76,7 @@ T2Cache <--> Heap : eventual\nsync
 @enduml
 -->
 
-![Thread Memory Architecture](http://www.plantuml.com/plantuml/svg/bLFBRjim4BphAnQv1hq14jKqWfG8YgbLIrGfqoZnCsusaZPRcPWzqZ_ttYIhM5YdY7lv-tFcPzzPp2ZQ5BQ65T0I7d0Ya0auZYjTw8NJgR3rRdaCG-FGlHBx06qMaX7FBYqHVQ5a8JQ3j44h0xyXKxE0v3kf88JWJ8YO08g00Ds04D0WH14p1Ri1u44t0GS0XK0JC0pW06y0Q-0JW04d0QW0Ce0B-6hC4L0kW0MW0LO8G36x1Ri2u46l0Ai0GW0Lu0Nu0kW0Oy0F-0RW0Yu1s8tKA4LUqQ4vK7jO7Zo_qXz4Ey8wkkLyD7bTxP-zzsVUTVdzw-yVxNy_iprk_L__wXxvFxqzRuFzd_Sy_fzxgxvd-V_V7m00)
+![Thread Memory Architecture](http://www.plantuml.com/plantuml/svg/~1bLFBRjim4BphAnQv1hq14jKqWfG8YgbLIrGfqoZnCsusaZPRcPWzqZ_ttYIhM5YdY7lv-tFcPzzPp2ZQ5BQ65T0I7d0Ya0auZYjTw8NJgR3rRdaCG-FGlHBx06qMaX7FBYqHVQ5a8JQ3j44h0xyXKxE0v3kf88JWJ8YO08g00Ds04D0WH14p1Ri1u44t0GS0XK0JC0pW06y0Q-0JW04d0QW0Ce0B-6hC4L0kW0MW0LO8G36x1Ri2u46l0Ai0GW0Lu0Nu0kW0Oy0F-0RW0Yu1s8tKA4LUqQ4vK7jO7Zo_qXz4Ey8wkkLyD7bTxP-zzsVUTVdzw-yVxNy_iprk_L__wXxvFxqzRuFzd_Sy_fzxgxvd-V_V7m00)
 
 **How It Works:**
 1. Each thread has its own **stack** (local variables, method calls)
@@ -299,7 +299,7 @@ T2 -> Lock: release lock
 @enduml
 -->
 
-![Memory Visibility with Synchronized](http://www.plantuml.com/plantuml/svg/ZP91Jzim48Nl_XKxzWB4z8KvG5HrK2H4YW9TQXDq9caMONaHqBj9-USvCLQ6gU7qtJduystytZC8dDRu6IAafUf2oLGIb0pOT0IeXScaNdRFa3qX9h5WSI3fGW4cYWeT4GOTLmHLMT4g18hZLi62AX2V1ZK3tJ0rQejxKXh2-W5I3z0Xt0WrveZxnS9Wra_2Qq0Py1HO0ve03W00Xi01u03a01S35Hx1Ne2Am0xWD4m08D1By0Ai0mW0cO09W08O0Ae0Re0aO1zy3Zy36-4NG4Cp25L1Ra31O43W00Hm09u0Lu10S5Ma1m00000)
+![Memory Visibility with Synchronized](http://www.plantuml.com/plantuml/svg/~1ZP91Jzim48Nl_XKxzWB4z8KvG5HrK2H4YW9TQXDq9caMONaHqBj9-USvCLQ6gU7qtJduystytZC8dDRu6IAafUf2oLGIb0pOT0IeXScaNdRFa3qX9h5WSI3fGW4cYWeT4GOTLmHLMT4g18hZLi62AX2V1ZK3tJ0rQejxKXh2-W5I3z0Xt0WrveZxnS9Wra_2Qq0Py1HO0ve03W00Xi01u03a01S35Hx1Ne2Am0xWD4m08D1By0Ai0mW0cO09W08O0Ae0Re0aO1zy3Zy36-4NG4Cp25L1Ra31O43W00Hm09u0Lu10S5Ma1m00000)
 
 **Key Point:** Synchronized doesn't just provide mutual exclusion - it also ensures **memory visibility** by flushing and reloading from main memory at lock boundaries.
 

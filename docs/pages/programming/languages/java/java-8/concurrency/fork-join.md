@@ -79,7 +79,7 @@ stop
 @enduml
 -->
 
-![Divide-and-Conquer Pattern](http://www.plantuml.com/plantuml/svg/RP5DQzim48Rl-nH3Tew1r8NL2efBIIbxe5cX8cOMgBpTTqDtzlaHYi_lMmZNfM_lyy-tE_U96QNZCeBkuSUC6BT0aI4DW4K-0-Uf3XWSaNGBmSI56GOH4YSZ6H08tGQ9GG0KmmCS28u8J49L9MJ2k86bFJK0rY5w8oLYfz5BUq2xX_0IZ5Oa0pK25-2p-0lS0we05-4N-0qu0-00wW0LW17O0Pe6E47E0F44YO1Xy20u3gC5l03f85m0Ce23-2dO1hO3WS3_W48m59C4te9_CrUz__pvVVzVwZ-lV_VwNz_lVm00)
+![Divide-and-Conquer Pattern](http://www.plantuml.com/plantuml/svg/~1RP5DQzim48Rl-nH3Tew1r8NL2efBIIbxe5cX8cOMgBpTTqDtzlaHYi_lMmZNfM_lyy-tE_U96QNZCeBkuSUC6BT0aI4DW4K-0-Uf3XWSaNGBmSI56GOH4YSZ6H08tGQ9GG0KmmCS28u8J49L9MJ2k86bFJK0rY5w8oLYfz5BUq2xX_0IZ5Oa0pK25-2p-0lS0we05-4N-0qu0-00wW0LW17O0Pe6E47E0F44YO1Xy20u3gC5l03f85m0Ce23-2dO1hO3WS3_W48m59C4te9_CrUz__pvVVzVwZ-lV_VwNz_lVm00)
 
 ### Basic Pattern
 
@@ -411,7 +411,7 @@ W1 -> Q1 : Fork
 @enduml
 -->
 
-![Work-Stealing Algorithm](http://www.plantuml.com/plantuml/svg/VL9BRjim4BphAnQv1hq1Ki8rGf8K4of9ZIWYGPafRCaMONcHaAkx-kyQ-v8YbKWlUz-VczzpnIHXPIIZ5OA53yW3K2fSs1buUOYHYWIea3IdaaDFyWKpWIIfNYF1WGvLJWcm4O08H8h08XqEIK96mTRO9ZSWp4GvOD5fLg5oU42YpZ3jH8W3s2G_0kq06S01y0DO0wu06S05u0Cu0MW0AW01O1sW0Em04i2gm07W1iG08y0IO0We0Le0EO0Dy3Se2FW3JW48q5Lu5-m1de9rArYjjKVoxXxxFpxjxdVjxvVztxV_bRy_p-VhzOBvw_xZVm00)
+![Work-Stealing Algorithm](http://www.plantuml.com/plantuml/svg/~1VL9BRjim4BphAnQv1hq1Ki8rGf8K4of9ZIWYGPafRCaMONcHaAkx-kyQ-v8YbKWlUz-VczzpnIHXPIIZ5OA53yW3K2fSs1buUOYHYWIea3IdaaDFyWKpWIIfNYF1WGvLJWcm4O08H8h08XqEIK96mTRO9ZSWp4GvOD5fLg5oU42YpZ3jH8W3s2G_0kq06S01y0DO0wu06S05u0Cu0MW0AW01O1sW0Em04i2gm07W1iG08y0IO0We0Le0EO0Dy3Se2FW3JW48q5Lu5-m1de9rArYjjKVoxXxxFpxjxdVjxvVztxV_bRy_p-VhzOBvw_xZVm00)
 
 **Benefits:**
 - **Load balancing**: Idle threads help busy threads
