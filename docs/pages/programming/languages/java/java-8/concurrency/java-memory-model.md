@@ -45,35 +45,38 @@ The **Java Memory Model (JMM)** defines how threads interact with memory, ensuri
 
 ## Thread Memory Architecture
 
-```mermaid
-graph TD
-    subgraph "Thread 1"
-        T1Stack[Stack<br/>Local Variables]
-        T1Cache[CPU Cache<br/>Thread 1]
-    end
+<!-- PlantUML Source:
+@startuml
+skinparam backgroundColor #0d1117
+skinparam defaultTextAlignment center
+skinparam packageBorderColor #00ff00
+skinparam packageBackgroundColor #1a1a1a
+skinparam componentBorderColor #00ff00
+skinparam arrowColor #00ff00
 
-    subgraph "Thread 2"
-        T2Stack[Stack<br/>Local Variables]
-        T2Cache[CPU Cache<br/>Thread 2]
-    end
+package "Thread 1" #fff4e1 {
+  component [Stack\nLocal Variables] as T1Stack #fff4e1
+  component [CPU Cache\nThread 1] as T1Cache #e1f5ff
+}
 
-    subgraph "Main Memory"
-        Heap[Heap<br/>Shared Objects]
-        Static[Static Variables<br/>Class Data]
-    end
+package "Thread 2" #fff4e1 {
+  component [Stack\nLocal Variables] as T2Stack #fff4e1
+  component [CPU Cache\nThread 2] as T2Cache #e1f5ff
+}
 
-    T1Stack -->|reads/writes| T1Cache
-    T2Stack -->|reads/writes| T2Cache
-    T1Cache <-->|eventual sync| Heap
-    T2Cache <-->|eventual sync| Heap
+package "Main Memory" #ffe1e1 {
+  component [Heap\nShared Objects] as Heap #ffe1e1
+  component [Static Variables\nClass Data] as Static #ffe1e1
+}
 
-    style Heap fill:#ffe1e1
-    style Static fill:#ffe1e1
-    style T1Cache fill:#e1f5ff
-    style T2Cache fill:#e1f5ff
-    style T1Stack fill:#fff4e1
-    style T2Stack fill:#fff4e1
-```
+T1Stack -down-> T1Cache : reads/writes
+T2Stack -down-> T2Cache : reads/writes
+T1Cache <--> Heap : eventual\nsync
+T2Cache <--> Heap : eventual\nsync
+@enduml
+-->
+
+![Thread Memory Architecture](http://www.plantuml.com/plantuml/svg/bLFBRjim4BphAnQv1hq14jKqWfG8YgbLIrGfqoZnCsusaZPRcPWzqZ_ttYIhM5YdY7lv-tFcPzzPp2ZQ5BQ65T0I7d0Ya0auZYjTw8NJgR3rRdaCG-FGlHBx06qMaX7FBYqHVQ5a8JQ3j44h0xyXKxE0v3kf88JWJ8YO08g00Ds04D0WH14p1Ri1u44t0GS0XK0JC0pW06y0Q-0JW04d0QW0Ce0B-6hC4L0kW0MW0LO8G36x1Ri2u46l0Ai0GW0Lu0Nu0kW0Oy0F-0RW0Yu1s8tKA4LUqQ4vK7jO7Zo_qXz4Ey8wkkLyD7bTxP-zzsVUTVdzw-yVxNy_iprk_L__wXxvFxqzRuFzd_Sy_fzxgxvd-V_V7m00)
 
 **How It Works:**
 1. Each thread has its own **stack** (local variables, method calls)
@@ -269,24 +272,34 @@ public class BankAccount {
 
 ### Memory Visibility with Synchronized
 
-```mermaid
-sequenceDiagram
-    participant T1 as Thread 1
-    participant Lock
-    participant Memory as Main Memory
-    participant T2 as Thread 2
+<!-- PlantUML Source:
+@startuml
+skinparam backgroundColor #0d1117
+skinparam sequenceArrowColor #00ff00
+skinparam sequenceParticipantBorderColor #00ff00
+skinparam sequenceParticipantBackgroundColor #1a1a1a
+skinparam noteBorderColor #00ff00
+skinparam noteBackgroundColor #2a2a2a
 
-    T1->>Lock: acquire lock
-    T1->>T1: counter = 1
-    T1->>Memory: flush all changes<br/>to main memory
-    T1->>Lock: release lock
-    Note over Memory: counter = 1 visible
+participant "Thread 1" as T1
+participant Lock
+participant "Main Memory" as Memory
+participant "Thread 2" as T2
 
-    T2->>Lock: acquire lock
-    T2->>Memory: read latest values<br/>from main memory
-    T2->>T2: sees counter = 1
-    T2->>Lock: release lock
-```
+T1 -> Lock: acquire lock
+T1 -> T1: counter = 1
+T1 -> Memory: flush all changes\nto main memory
+T1 -> Lock: release lock
+note over Memory: counter = 1 visible
+
+T2 -> Lock: acquire lock
+T2 -> Memory: read latest values\nfrom main memory
+T2 -> T2: sees counter = 1
+T2 -> Lock: release lock
+@enduml
+-->
+
+![Memory Visibility with Synchronized](http://www.plantuml.com/plantuml/svg/ZP91Jzim48Nl_XKxzWB4z8KvG5HrK2H4YW9TQXDq9caMONaHqBj9-USvCLQ6gU7qtJduystytZC8dDRu6IAafUf2oLGIb0pOT0IeXScaNdRFa3qX9h5WSI3fGW4cYWeT4GOTLmHLMT4g18hZLi62AX2V1ZK3tJ0rQejxKXh2-W5I3z0Xt0WrveZxnS9Wra_2Qq0Py1HO0ve03W00Xi01u03a01S35Hx1Ne2Am0xWD4m08D1By0Ai0mW0cO09W08O0Ae0Re0aO1zy3Zy36-4NG4Cp25L1Ra31O43W00Hm09u0Lu10S5Ma1m00000)
 
 **Key Point:** Synchronized doesn't just provide mutual exclusion - it also ensures **memory visibility** by flushing and reloading from main memory at lock boundaries.
 
