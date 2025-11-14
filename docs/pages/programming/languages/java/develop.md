@@ -109,7 +109,7 @@
 
 <sub>[Back to top](#table-of-contents)</sub>
 
-### [Multithreading and Concurrency](#multithreading-and-concurrency)
+### [Multithreading and Concurrency](concurrency.md)
 
   - [Creating and managing threads](java-8/concurrency/threads.md)
   - [Thread lifecycle and states](java-8/concurrency/threads.md#thread-lifecycle)
